@@ -1,6 +1,6 @@
 # run-hol-code README
 
-从0.0.2版本开始已发布至vscode插件商店。
+从0.0.2版本开始已发布至vscode插件商店，[点此跳转](https://marketplace.visualstudio.com/items?itemName=Renping.run-hol-code)。
 
 ## 插件设置
 
@@ -16,13 +16,13 @@
 
 ## 插件安装方法
 
-在vscode插件商店搜索`run-hol-code`安装。
+**推荐：在vscode插件商店搜索`run-hol-code`安装。**
 
 或者：  
 1. 下载`run-hol-code-x.x.x.vsix`文件
 2. vscode - 扩展 - 更多操作 - 从VSIX安装...
 3. 重新启动vscode  
-![安装图示](https://github.com/Satone7/run-hol-code/blob/master/image/install.png)
+![安装图示](https://raw.githubusercontent.com/Satone7/run-hol-code/master/image/install.png)
 
 
 ## Release Notes
@@ -43,6 +43,6 @@
 
 ## Github
 
-(Satone7/run-hol-code)[https://github.com/Satone7/run-hol-code]
+[Satone7/run-hol-code](https://github.com/Satone7/run-hol-code)
 
 **Enjoy!**
