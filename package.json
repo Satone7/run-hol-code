@@ -3,7 +3,7 @@
 	"displayName": "Run Hol code",
 	"publisher": "Renping",
 	"description": "Support for debugging the HOL code",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.45.0"
 	},

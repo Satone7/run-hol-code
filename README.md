@@ -1,6 +1,6 @@
 # run-hol-code README
 
-0.0.2版本将发布至vscode插件商店。
+从0.0.2版本开始已发布至vscode插件商店。
 
 ## 插件设置
 
@@ -16,7 +16,10 @@
 
 ## 插件安装方法
 
-1. 下载`run-hol-code-0.0.1.vsix`文件
+在vscode插件商店搜索`run-hol-code`安装。
+
+或者：  
+1. 下载`run-hol-code-x.x.x.vsix`文件
 2. vscode - 扩展 - 更多操作 - 从VSIX安装...
 3. 重新启动vscode  
 ![安装图示](https://github.com/Satone7/run-hol-code/blob/master/image/install.png)
@@ -33,5 +36,13 @@
 ## run-hol-code-0.0.2
 
 增加了自动添加`e ( );`的选项，默认不开启。
+
+## run-hol-code-0.0.3
+
+更新上版本写错的README..
+
+## Github
+
+(Satone7/run-hol-code)[https://github.com/Satone7/run-hol-code]
 
 **Enjoy!**
