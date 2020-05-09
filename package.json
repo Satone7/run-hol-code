@@ -1,0 +1,110 @@
+{
+	"name": "run-hol-code",
+	"displayName": "Run Hol code",
+	"publisher": "Renping",
+	"description": "Support for debugging the HOL code",
+	"version": "0.0.2",
+	"engines": {
+		"vscode": "^1.45.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*",
+		"onCommand:run-hol-code.cd",
+		"onCommand:run-hol-code.lines",
+		"onCommand:run-hol-code.hol"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "run-hol-code.cd",
+				"title": "cd file path"
+			},
+			{
+				"command": "run-hol-code.hol",
+				"title": "Hol file"
+			},
+			{
+				"command": "run-hol-code.lines",
+				"title": "Run lines"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "!inOutput",
+					"command": "run-hol-code.hol",
+					"group": "navigation@1"
+				},
+				{
+					"when": "!inOutput",
+					"command": "run-hol-code.lines",
+					"group": "navigation@1"
+				},
+				{
+					"when": "!inOutput",
+					"command": "run-hol-code.cd",
+					"group": "navigation@1"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "run-hol-code.hol"
+				},
+				{
+					"command": "run-hol-code.cd"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "run-hol-code.lines",
+				"key": "ctrl+alt+r"
+			},
+			{
+				"command": "run-hol-code.hol",
+				"key": "ctrl+alt+h"
+			},
+			{
+				"command": "run-hol-code.cd",
+				"key": "ctrl+alt+c"
+			}
+		],
+		"configuration": [
+			{
+				"title": "run-hol-code",
+				"properties": {
+					"run-hol-code.HolPath": {
+						"type": "string",
+						"default": "hol",
+						"description": "bin/hol的绝对路径"
+					},
+					"run-hol-code.Auto": {
+						"type": "boolean",
+						"default": false,
+						"description": "自动添加 e( );"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.45.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}
