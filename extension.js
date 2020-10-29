@@ -64,9 +64,31 @@ function activate(context) {
 		terminal.sendText(lines);
 	})
 
+	let format = vscode.commands.registerCommand('run-hol-code.format', function() {
+		var terminal = vscode.window.activeTerminal;
+		var textEditor = vscode.window.activeTextEditor;
+		var format = textEditor.document.getText(textEditor.selection.with(textEditor.selection.start, textEditor.selection.end));
+		var matchList = []
+		if (!format) {
+			return;
+		} else {
+			matchList = format.match(/(?:\e\s*\()(.+)(?:\);)/g);
+			var formated = matchList[0].replace(/(?:\e\s*\()(.+)(?:\);)/,"$1");
+			for (let index = 1; index < matchList.length; index++) {
+				const element = matchList[index];
+				formated += element.replace(/(?:\e\s*\()(.+)(?:\);)/," >>\n$1");
+			}
+		}
+		textEditor.edit((editBuilder) => {
+			editBuilder.insert(textEditor.selection.end, '\n\n' + formated + '\n')
+		})
+		//terminal.sendText(format);
+	})
+
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(run);
 	context.subscriptions.push(lines);
+	context.subscriptions.push(format);
 }
 exports.activate = activate;
 

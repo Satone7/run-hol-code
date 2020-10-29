@@ -18,7 +18,8 @@
 		"*",
 		"onCommand:run-hol-code.cd",
 		"onCommand:run-hol-code.lines",
-		"onCommand:run-hol-code.hol"
+		"onCommand:run-hol-code.hol",
+		"onCommand:run-hol-code.format"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -34,6 +35,10 @@
 			{
 				"command": "run-hol-code.lines",
 				"title": "Run lines"
+			},
+			{
+				"command": "run-hol-code.format",
+				"title": "Format lines"
 			}
 		],
 		"menus": {
@@ -51,6 +56,11 @@
 				{
 					"when": "!inOutput",
 					"command": "run-hol-code.cd",
+					"group": "navigation@1"
+				},
+				{
+					"when": "!inOutput",
+					"command": "run-hol-code.format",
 					"group": "navigation@1"
 				}
 			],
