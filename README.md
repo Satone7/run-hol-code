@@ -41,6 +41,10 @@
 
 更新上版本写错的README..
 
+## 0.04
+
+增加"format"功能，将选中的若干`e();`格式编写的对策格式化为`>>`方法连接的形式。
+
 ## Github
 
 [Satone7/run-hol-code](https://github.com/Satone7/run-hol-code)
